@@ -1,7 +1,7 @@
 # test coverage for  [connect-redis (v3.2.0)](https://github.com/visionmedia/connect-redis#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-connect-redis.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-connect-redis) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-connect-redis.svg)](https://travis-ci.org/npmtest/node-npmtest-connect-redis)
 #### Redis session store for Connect
 
-[![NPM](https://nodei.co/npm/connect-redis.png?downloads=true)](https://www.npmjs.com/package/connect-redis)
+[![NPM](https://nodei.co/npm/connect-redis.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/connect-redis)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-connect-redis/tree/alpha)|
 |--:|:--|
@@ -9,11 +9,11 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-connect-redis/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-connect-redis/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-connect-redis/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-connect-redis/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-connect-redis/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-connect-redis/build/coverage.html/index.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-connect-redis/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-connect-redis/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-connect-redis/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-connect-redis%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-connect-redis/build/test-report.html)
+[![test-report](https://npmtest.github.io/node-npmtest-connect-redis/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-connect-redis/build/test-report.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-connect-redis/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-connect-redis%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-connect-redis/build/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-connect-redis/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-connect-redis/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-connect-redis/build/screenCapture.npmPackageListing.svg)
 
@@ -27,16 +27,14 @@
 
 {
     "author": {
-        "name": "TJ Holowaychuk",
-        "email": "tj@vision-media.ca"
+        "name": "TJ Holowaychuk"
     },
     "bugs": {
         "url": "https://github.com/visionmedia/connect-redis/issues"
     },
     "contributors": [
         {
-            "name": "Marc Harter",
-            "email": "wavded@gmail.com"
+            "name": "Marc Harter"
         }
     ],
     "dependencies": {
@@ -67,21 +65,17 @@
     "main": "./index.js",
     "maintainers": [
         {
-            "name": "tjholowaychuk",
-            "email": "tj@vision-media.ca"
+            "name": "tjholowaychuk"
         },
         {
-            "name": "chirag04",
-            "email": "jain_chirag04@yahoo.com"
+            "name": "chirag04"
         },
         {
-            "name": "wavded",
-            "email": "wavded@gmail.com"
+            "name": "wavded"
         }
     ],
     "name": "connect-redis",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com/visionmedia/connect-redis.git"
