@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-connect-redis/connect-redis/lib/connect-redis.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-connect-redis/node_modules/connect-redis/lib/connect-redis.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-connect-redis">npmtest-connect-redis (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-connect-redis/connect-redis/lib/connect-redis.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-connect-redis/node_modules/connect-redis/lib/connect-redis.js</span></h1>
     <h2>
         
         Statements: <span class="metric">5.23% <small>(8 / 153)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-connect-redis/connect-redis/lib/</a> » connect-redis.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-connect-redis/node_modules/connect-redis/lib/</a> &#187; connect-redis.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -859,7 +861,7 @@
 var debug = require('debug')('connect:redis');
 var redis = require('redis');
 var util = require('util');
-var noop = <span class="fstat-no" title="function not covered">function(){</span>};
+var noop = <span class="fstat-no" title="function not covered" >function(){</span>};
 &nbsp;
 /**
  * One day in seconds.
@@ -867,9 +869,9 @@ var noop = <span class="fstat-no" title="function not covered">function(){</span
 &nbsp;
 var oneDay = 86400;
 &nbsp;
-<span class="fstat-no" title="function not covered">function getTTL(store, sess) {</span>
-<span class="cstat-no" title="statement not covered">  var maxAge = sess.cookie.maxAge;</span>
-<span class="cstat-no" title="statement not covered">  return store.ttl || (typeof maxAge === 'number'</span>
+<span class="fstat-no" title="function not covered" >function getTTL(store, sess) {</span>
+<span class="cstat-no" title="statement not covered" >  var maxAge = sess.cookie.maxAge;</span>
+<span class="cstat-no" title="statement not covered" >  return store.ttl || (typeof maxAge === 'number'</span>
     ? Math.floor(maxAge / 1000)
     : oneDay);
 }
@@ -882,13 +884,13 @@ var oneDay = 86400;
  * @api public
  */
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered">function (session) {</span>
+module.exports = <span class="fstat-no" title="function not covered" >function (session) {</span>
 &nbsp;
   /**
    * Express's session Store.
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var Store = session.Store;</span>
+<span class="cstat-no" title="statement not covered" >  var Store = session.Store;</span>
 &nbsp;
   /**
    * Initialize RedisStore with the given `options`.
@@ -897,81 +899,81 @@ module.exports = <span class="fstat-no" title="function not covered">function (s
    * @api public
    */
 &nbsp;
-<span class="fstat-no" title="function not covered">  function RedisStore (options) {</span>
-<span class="cstat-no" title="statement not covered">    if (!(this instanceof RedisStore)) {</span>
-<span class="cstat-no" title="statement not covered">      throw new TypeError('Cannot call RedisStore constructor as a function');</span>
+<span class="fstat-no" title="function not covered" >  function RedisStore (options) {</span>
+<span class="cstat-no" title="statement not covered" >    if (!(this instanceof RedisStore)) {</span>
+<span class="cstat-no" title="statement not covered" >      throw new TypeError('Cannot call RedisStore constructor as a function');</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    options = options || {};</span>
-<span class="cstat-no" title="statement not covered">    Store.call(this, options);</span>
-<span class="cstat-no" title="statement not covered">    this.prefix = options.prefix == null</span>
+<span class="cstat-no" title="statement not covered" >    options = options || {};</span>
+<span class="cstat-no" title="statement not covered" >    Store.call(this, options);</span>
+<span class="cstat-no" title="statement not covered" >    this.prefix = options.prefix == null</span>
       ? 'sess:'
       : options.prefix;
 &nbsp;
-<span class="cstat-no" title="statement not covered">    delete options.prefix;</span>
+<span class="cstat-no" title="statement not covered" >    delete options.prefix;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    this.serializer = options.serializer || JSON;</span>
+<span class="cstat-no" title="statement not covered" >    this.serializer = options.serializer || JSON;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (options.url) {</span>
-<span class="cstat-no" title="statement not covered">      options.socket = options.url;</span>
+<span class="cstat-no" title="statement not covered" >    if (options.url) {</span>
+<span class="cstat-no" title="statement not covered" >      options.socket = options.url;</span>
     }
 &nbsp;
     // convert to redis connect params
-<span class="cstat-no" title="statement not covered">    if (options.client) {</span>
-<span class="cstat-no" title="statement not covered">      this.client = options.client;</span>
+<span class="cstat-no" title="statement not covered" >    if (options.client) {</span>
+<span class="cstat-no" title="statement not covered" >      this.client = options.client;</span>
     }
-    else <span class="cstat-no" title="statement not covered">if (options.socket) {</span>
-<span class="cstat-no" title="statement not covered">      this.client = redis.createClient(options.socket, options);</span>
+    else <span class="cstat-no" title="statement not covered" >if (options.socket) {</span>
+<span class="cstat-no" title="statement not covered" >      this.client = redis.createClient(options.socket, options);</span>
     }
     else {
-<span class="cstat-no" title="statement not covered">      this.client = redis.createClient(options);</span>
+<span class="cstat-no" title="statement not covered" >      this.client = redis.createClient(options);</span>
     }
 &nbsp;
     // logErrors
-<span class="cstat-no" title="statement not covered">    if(options.logErrors){</span>
+<span class="cstat-no" title="statement not covered" >    if(options.logErrors){</span>
       // if options.logErrors is function, allow it to override. else provide default logger. useful for large scale deployment
       // which may need to write to a distributed log
-<span class="cstat-no" title="statement not covered">      if(typeof options.logErrors != 'function'){</span>
-<span class="cstat-no" title="statement not covered">        options.logErrors = <span class="fstat-no" title="function not covered">function (err) {</span></span>
-<span class="cstat-no" title="statement not covered">  			  console.error('Warning: connect-redis reported a client error: ' + err);</span>
+<span class="cstat-no" title="statement not covered" >      if(typeof options.logErrors != 'function'){</span>
+<span class="cstat-no" title="statement not covered" >        options.logErrors = <span class="fstat-no" title="function not covered" >function (err) {</span></span>
+<span class="cstat-no" title="statement not covered" >  			  console.error('Warning: connect-redis reported a client error: ' + err);</span>
   		  };
       }
-<span class="cstat-no" title="statement not covered">  		this.client.on('error', options.logErrors);</span>
+<span class="cstat-no" title="statement not covered" >  		this.client.on('error', options.logErrors);</span>
   	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (options.pass) {</span>
-<span class="cstat-no" title="statement not covered">      this.client.auth(options.pass, <span class="fstat-no" title="function not covered">function (err) {</span></span>
-<span class="cstat-no" title="statement not covered">        if (err) {</span>
-<span class="cstat-no" title="statement not covered">          throw err;</span>
+<span class="cstat-no" title="statement not covered" >    if (options.pass) {</span>
+<span class="cstat-no" title="statement not covered" >      this.client.auth(options.pass, <span class="fstat-no" title="function not covered" >function (err) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >          throw err;</span>
         }
       });
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    this.ttl = options.ttl;</span>
-<span class="cstat-no" title="statement not covered">    this.disableTTL = options.disableTTL;</span>
+<span class="cstat-no" title="statement not covered" >    this.ttl = options.ttl;</span>
+<span class="cstat-no" title="statement not covered" >    this.disableTTL = options.disableTTL;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (options.unref) <span class="cstat-no" title="statement not covered">this.client.unref();</span></span>
+<span class="cstat-no" title="statement not covered" >    if (options.unref) <span class="cstat-no" title="statement not covered" >this.client.unref();</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if ('db' in options) {</span>
-<span class="cstat-no" title="statement not covered">      if (typeof options.db !== 'number') {</span>
-<span class="cstat-no" title="statement not covered">        console.error('Warning: connect-redis expects a number for the "db" option');</span>
+<span class="cstat-no" title="statement not covered" >    if ('db' in options) {</span>
+<span class="cstat-no" title="statement not covered" >      if (typeof options.db !== 'number') {</span>
+<span class="cstat-no" title="statement not covered" >        console.error('Warning: connect-redis expects a number for the "db" option');</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      self.client.select(options.db);</span>
-<span class="cstat-no" title="statement not covered">      self.client.on('connect', <span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">        self.client.select(options.db);</span>
+<span class="cstat-no" title="statement not covered" >      self.client.select(options.db);</span>
+<span class="cstat-no" title="statement not covered" >      self.client.on('connect', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        self.client.select(options.db);</span>
       });
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    self.client.on('error', <span class="fstat-no" title="function not covered">function (er) {</span></span>
-<span class="cstat-no" title="statement not covered">      debug('Redis returned err', er);</span>
-<span class="cstat-no" title="statement not covered">      self.emit('disconnect', er);</span>
+<span class="cstat-no" title="statement not covered" >    self.client.on('error', <span class="fstat-no" title="function not covered" >function (er) {</span></span>
+<span class="cstat-no" title="statement not covered" >      debug('Redis returned err', er);</span>
+<span class="cstat-no" title="statement not covered" >      self.emit('disconnect', er);</span>
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered">    self.client.on('connect', <span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">      self.emit('connect');</span>
+<span class="cstat-no" title="statement not covered" >    self.client.on('connect', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      self.emit('connect');</span>
     });
   }
 &nbsp;
@@ -979,7 +981,7 @@ module.exports = <span class="fstat-no" title="function not covered">function (s
    * Inherit from `Store`.
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  util.inherits(RedisStore, Store);</span>
+<span class="cstat-no" title="statement not covered" >  util.inherits(RedisStore, Store);</span>
 &nbsp;
   /**
    * Attempt to fetch session by the given `sid`.
@@ -989,27 +991,27 @@ module.exports = <span class="fstat-no" title="function not covered">function (s
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  RedisStore.prototype.get = <span class="fstat-no" title="function not covered">function (sid, fn) {</span></span>
-<span class="cstat-no" title="statement not covered">    var store = this;</span>
-<span class="cstat-no" title="statement not covered">    var psid = store.prefix + sid;</span>
-<span class="cstat-no" title="statement not covered">    if (!fn) <span class="cstat-no" title="statement not covered">fn = noop;</span></span>
-<span class="cstat-no" title="statement not covered">    debug('GET "%s"', sid);</span>
+<span class="cstat-no" title="statement not covered" >  RedisStore.prototype.get = <span class="fstat-no" title="function not covered" >function (sid, fn) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var store = this;</span>
+<span class="cstat-no" title="statement not covered" >    var psid = store.prefix + sid;</span>
+<span class="cstat-no" title="statement not covered" >    if (!fn) <span class="cstat-no" title="statement not covered" >fn = noop;</span></span>
+<span class="cstat-no" title="statement not covered" >    debug('GET "%s"', sid);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    store.client.get(psid, <span class="fstat-no" title="function not covered">function (er, data) {</span></span>
-<span class="cstat-no" title="statement not covered">      if (er) <span class="cstat-no" title="statement not covered">return fn(er);</span></span>
-<span class="cstat-no" title="statement not covered">      if (!data) <span class="cstat-no" title="statement not covered">return fn();</span></span>
+<span class="cstat-no" title="statement not covered" >    store.client.get(psid, <span class="fstat-no" title="function not covered" >function (er, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (er) <span class="cstat-no" title="statement not covered" >return fn(er);</span></span>
+<span class="cstat-no" title="statement not covered" >      if (!data) <span class="cstat-no" title="statement not covered" >return fn();</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      var result;</span>
-<span class="cstat-no" title="statement not covered">      data = data.toString();</span>
-<span class="cstat-no" title="statement not covered">      debug('GOT %s', data);</span>
+<span class="cstat-no" title="statement not covered" >      var result;</span>
+<span class="cstat-no" title="statement not covered" >      data = data.toString();</span>
+<span class="cstat-no" title="statement not covered" >      debug('GOT %s', data);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      try {</span>
-<span class="cstat-no" title="statement not covered">        result = store.serializer.parse(data);</span>
+<span class="cstat-no" title="statement not covered" >      try {</span>
+<span class="cstat-no" title="statement not covered" >        result = store.serializer.parse(data);</span>
       }
       catch (er) {
-<span class="cstat-no" title="statement not covered">        return fn(er);</span>
+<span class="cstat-no" title="statement not covered" >        return fn(er);</span>
       }
-<span class="cstat-no" title="statement not covered">      return fn(null, result);</span>
+<span class="cstat-no" title="statement not covered" >      return fn(null, result);</span>
     });
   };
 &nbsp;
@@ -1022,32 +1024,32 @@ module.exports = <span class="fstat-no" title="function not covered">function (s
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  RedisStore.prototype.set = <span class="fstat-no" title="function not covered">function (sid, sess, fn) {</span></span>
-<span class="cstat-no" title="statement not covered">    var store = this;</span>
-<span class="cstat-no" title="statement not covered">    var args = [store.prefix + sid];</span>
-<span class="cstat-no" title="statement not covered">    if (!fn) <span class="cstat-no" title="statement not covered">fn = noop;</span></span>
+<span class="cstat-no" title="statement not covered" >  RedisStore.prototype.set = <span class="fstat-no" title="function not covered" >function (sid, sess, fn) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var store = this;</span>
+<span class="cstat-no" title="statement not covered" >    var args = [store.prefix + sid];</span>
+<span class="cstat-no" title="statement not covered" >    if (!fn) <span class="cstat-no" title="statement not covered" >fn = noop;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    try {</span>
-<span class="cstat-no" title="statement not covered">      var jsess = store.serializer.stringify(sess);</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      var jsess = store.serializer.stringify(sess);</span>
     }
     catch (er) {
-<span class="cstat-no" title="statement not covered">      return fn(er);</span>
+<span class="cstat-no" title="statement not covered" >      return fn(er);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    args.push(jsess);</span>
+<span class="cstat-no" title="statement not covered" >    args.push(jsess);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (!store.disableTTL) {</span>
-<span class="cstat-no" title="statement not covered">      var ttl = getTTL(store, sess);</span>
-<span class="cstat-no" title="statement not covered">      args.push('EX', ttl);</span>
-<span class="cstat-no" title="statement not covered">      debug('SET "%s" %s ttl:%s', sid, jsess, ttl);</span>
+<span class="cstat-no" title="statement not covered" >    if (!store.disableTTL) {</span>
+<span class="cstat-no" title="statement not covered" >      var ttl = getTTL(store, sess);</span>
+<span class="cstat-no" title="statement not covered" >      args.push('EX', ttl);</span>
+<span class="cstat-no" title="statement not covered" >      debug('SET "%s" %s ttl:%s', sid, jsess, ttl);</span>
     } else {
-<span class="cstat-no" title="statement not covered">      debug('SET "%s" %s', sid, jsess);</span>
+<span class="cstat-no" title="statement not covered" >      debug('SET "%s" %s', sid, jsess);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    store.client.set(args, <span class="fstat-no" title="function not covered">function (er) {</span></span>
-<span class="cstat-no" title="statement not covered">      if (er) <span class="cstat-no" title="statement not covered">return fn(er);</span></span>
-<span class="cstat-no" title="statement not covered">      debug('SET complete');</span>
-<span class="cstat-no" title="statement not covered">      fn.apply(null, arguments);</span>
+<span class="cstat-no" title="statement not covered" >    store.client.set(args, <span class="fstat-no" title="function not covered" >function (er) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (er) <span class="cstat-no" title="statement not covered" >return fn(er);</span></span>
+<span class="cstat-no" title="statement not covered" >      debug('SET complete');</span>
+<span class="cstat-no" title="statement not covered" >      fn.apply(null, arguments);</span>
     });
   };
 &nbsp;
@@ -1058,18 +1060,18 @@ module.exports = <span class="fstat-no" title="function not covered">function (s
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  RedisStore.prototype.destroy = <span class="fstat-no" title="function not covered">function (sid, fn) {</span></span>
-<span class="cstat-no" title="statement not covered">    debug('DEL "%s"', sid);</span>
-<span class="cstat-no" title="statement not covered">    if (Array.isArray(sid)) {</span>
-<span class="cstat-no" title="statement not covered">      var multi = this.client.multi();</span>
-<span class="cstat-no" title="statement not covered">      var prefix = this.prefix;</span>
-<span class="cstat-no" title="statement not covered">      sid.forEach(<span class="fstat-no" title="function not covered">function (s) {</span></span>
-<span class="cstat-no" title="statement not covered">        multi.del(prefix + s);</span>
+<span class="cstat-no" title="statement not covered" >  RedisStore.prototype.destroy = <span class="fstat-no" title="function not covered" >function (sid, fn) {</span></span>
+<span class="cstat-no" title="statement not covered" >    debug('DEL "%s"', sid);</span>
+<span class="cstat-no" title="statement not covered" >    if (Array.isArray(sid)) {</span>
+<span class="cstat-no" title="statement not covered" >      var multi = this.client.multi();</span>
+<span class="cstat-no" title="statement not covered" >      var prefix = this.prefix;</span>
+<span class="cstat-no" title="statement not covered" >      sid.forEach(<span class="fstat-no" title="function not covered" >function (s) {</span></span>
+<span class="cstat-no" title="statement not covered" >        multi.del(prefix + s);</span>
       });
-<span class="cstat-no" title="statement not covered">      multi.exec(fn);</span>
+<span class="cstat-no" title="statement not covered" >      multi.exec(fn);</span>
     } else {
-<span class="cstat-no" title="statement not covered">      sid = this.prefix + sid;</span>
-<span class="cstat-no" title="statement not covered">      this.client.del(sid, fn);</span>
+<span class="cstat-no" title="statement not covered" >      sid = this.prefix + sid;</span>
+<span class="cstat-no" title="statement not covered" >      this.client.del(sid, fn);</span>
     }
   };
 &nbsp;
@@ -1082,19 +1084,19 @@ module.exports = <span class="fstat-no" title="function not covered">function (s
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  RedisStore.prototype.touch = <span class="fstat-no" title="function not covered">function (sid, sess, fn) {</span></span>
-<span class="cstat-no" title="statement not covered">    var store = this;</span>
-<span class="cstat-no" title="statement not covered">    var psid = store.prefix + sid;</span>
-<span class="cstat-no" title="statement not covered">    if (!fn) <span class="cstat-no" title="statement not covered">fn = noop;</span></span>
-<span class="cstat-no" title="statement not covered">    if (store.disableTTL) <span class="cstat-no" title="statement not covered">return fn();</span></span>
+<span class="cstat-no" title="statement not covered" >  RedisStore.prototype.touch = <span class="fstat-no" title="function not covered" >function (sid, sess, fn) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var store = this;</span>
+<span class="cstat-no" title="statement not covered" >    var psid = store.prefix + sid;</span>
+<span class="cstat-no" title="statement not covered" >    if (!fn) <span class="cstat-no" title="statement not covered" >fn = noop;</span></span>
+<span class="cstat-no" title="statement not covered" >    if (store.disableTTL) <span class="cstat-no" title="statement not covered" >return fn();</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var ttl = getTTL(store, sess);</span>
+<span class="cstat-no" title="statement not covered" >    var ttl = getTTL(store, sess);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    debug('EXPIRE "%s" ttl:%s', sid, ttl);</span>
-<span class="cstat-no" title="statement not covered">    store.client.expire(psid, ttl, <span class="fstat-no" title="function not covered">function (er) {</span></span>
-<span class="cstat-no" title="statement not covered">      if (er) <span class="cstat-no" title="statement not covered">return fn(er);</span></span>
-<span class="cstat-no" title="statement not covered">      debug('EXPIRE complete');</span>
-<span class="cstat-no" title="statement not covered">      fn.apply(this, arguments);</span>
+<span class="cstat-no" title="statement not covered" >    debug('EXPIRE "%s" ttl:%s', sid, ttl);</span>
+<span class="cstat-no" title="statement not covered" >    store.client.expire(psid, ttl, <span class="fstat-no" title="function not covered" >function (er) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (er) <span class="cstat-no" title="statement not covered" >return fn(er);</span></span>
+<span class="cstat-no" title="statement not covered" >      debug('EXPIRE complete');</span>
+<span class="cstat-no" title="statement not covered" >      fn.apply(this, arguments);</span>
     });
   };
 &nbsp;
@@ -1105,20 +1107,20 @@ module.exports = <span class="fstat-no" title="function not covered">function (s
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  RedisStore.prototype.ids = <span class="fstat-no" title="function not covered">function (fn) {</span></span>
-<span class="cstat-no" title="statement not covered">    var store = this;</span>
-<span class="cstat-no" title="statement not covered">    var pattern = store.prefix + '*';</span>
-<span class="cstat-no" title="statement not covered">    var prefixLength = store.prefix.length;</span>
-<span class="cstat-no" title="statement not covered">    if (!fn) <span class="cstat-no" title="statement not covered">fn = noop;</span></span>
+<span class="cstat-no" title="statement not covered" >  RedisStore.prototype.ids = <span class="fstat-no" title="function not covered" >function (fn) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var store = this;</span>
+<span class="cstat-no" title="statement not covered" >    var pattern = store.prefix + '*';</span>
+<span class="cstat-no" title="statement not covered" >    var prefixLength = store.prefix.length;</span>
+<span class="cstat-no" title="statement not covered" >    if (!fn) <span class="cstat-no" title="statement not covered" >fn = noop;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    debug('KEYS "%s"', pattern);</span>
-<span class="cstat-no" title="statement not covered">    store.client.keys(pattern, <span class="fstat-no" title="function not covered">function (er, keys) {</span></span>
-<span class="cstat-no" title="statement not covered">      if (er) <span class="cstat-no" title="statement not covered">return fn(er);</span></span>
-<span class="cstat-no" title="statement not covered">      debug('KEYS complete');</span>
-<span class="cstat-no" title="statement not covered">      keys = keys.map(<span class="fstat-no" title="function not covered">function (key) {</span></span>
-<span class="cstat-no" title="statement not covered">        return key.substr(prefixLength);</span>
+<span class="cstat-no" title="statement not covered" >    debug('KEYS "%s"', pattern);</span>
+<span class="cstat-no" title="statement not covered" >    store.client.keys(pattern, <span class="fstat-no" title="function not covered" >function (er, keys) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (er) <span class="cstat-no" title="statement not covered" >return fn(er);</span></span>
+<span class="cstat-no" title="statement not covered" >      debug('KEYS complete');</span>
+<span class="cstat-no" title="statement not covered" >      keys = keys.map(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return key.substr(prefixLength);</span>
       });
-<span class="cstat-no" title="statement not covered">      return fn(null, keys);</span>
+<span class="cstat-no" title="statement not covered" >      return fn(null, keys);</span>
     });
   };
 &nbsp;
@@ -1130,51 +1132,50 @@ module.exports = <span class="fstat-no" title="function not covered">function (s
    * @api public
    */
 &nbsp;
-<span class="cstat-no" title="statement not covered">  RedisStore.prototype.all = <span class="fstat-no" title="function not covered">function (fn) {</span></span>
-<span class="cstat-no" title="statement not covered">    var store = this;</span>
-<span class="cstat-no" title="statement not covered">    var pattern = store.prefix + '*';</span>
-<span class="cstat-no" title="statement not covered">    var prefixLength = store.prefix.length;</span>
-<span class="cstat-no" title="statement not covered">    if (!fn) <span class="cstat-no" title="statement not covered">fn = noop;</span></span>
+<span class="cstat-no" title="statement not covered" >  RedisStore.prototype.all = <span class="fstat-no" title="function not covered" >function (fn) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var store = this;</span>
+<span class="cstat-no" title="statement not covered" >    var pattern = store.prefix + '*';</span>
+<span class="cstat-no" title="statement not covered" >    var prefixLength = store.prefix.length;</span>
+<span class="cstat-no" title="statement not covered" >    if (!fn) <span class="cstat-no" title="statement not covered" >fn = noop;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    debug('KEYS "%s"', pattern);</span>
-<span class="cstat-no" title="statement not covered">    store.client.keys(pattern, <span class="fstat-no" title="function not covered">function (er, keys) {</span></span>
-<span class="cstat-no" title="statement not covered">      if (er) <span class="cstat-no" title="statement not covered">return fn(er);</span></span>
-<span class="cstat-no" title="statement not covered">      debug('KEYS complete');</span>
+<span class="cstat-no" title="statement not covered" >    debug('KEYS "%s"', pattern);</span>
+<span class="cstat-no" title="statement not covered" >    store.client.keys(pattern, <span class="fstat-no" title="function not covered" >function (er, keys) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (er) <span class="cstat-no" title="statement not covered" >return fn(er);</span></span>
+<span class="cstat-no" title="statement not covered" >      debug('KEYS complete');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      var multi = store.client.multi();</span>
+<span class="cstat-no" title="statement not covered" >      var multi = store.client.multi();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      keys.forEach(<span class="fstat-no" title="function not covered">function (key) {</span></span>
-<span class="cstat-no" title="statement not covered">        multi.get(key);</span>
+<span class="cstat-no" title="statement not covered" >      keys.forEach(<span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >        multi.get(key);</span>
       });
 &nbsp;
-<span class="cstat-no" title="statement not covered">      multi.exec(<span class="fstat-no" title="function not covered">function (er, sessions) {</span></span>
-<span class="cstat-no" title="statement not covered">        if (er) <span class="cstat-no" title="statement not covered">return fn(er);</span></span>
+<span class="cstat-no" title="statement not covered" >      multi.exec(<span class="fstat-no" title="function not covered" >function (er, sessions) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (er) <span class="cstat-no" title="statement not covered" >return fn(er);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        var result;</span>
-<span class="cstat-no" title="statement not covered">        try {</span>
-<span class="cstat-no" title="statement not covered">          result = sessions.map(<span class="fstat-no" title="function not covered">function (data, index) {</span></span>
-<span class="cstat-no" title="statement not covered">            data = data.toString();</span>
-<span class="cstat-no" title="statement not covered">            data = store.serializer.parse(data);</span>
-<span class="cstat-no" title="statement not covered">            data.id = keys[index].substr(prefixLength);</span>
-<span class="cstat-no" title="statement not covered">            return data;</span>
+<span class="cstat-no" title="statement not covered" >        var result;</span>
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >          result = sessions.map(<span class="fstat-no" title="function not covered" >function (data, index) {</span></span>
+<span class="cstat-no" title="statement not covered" >            data = data.toString();</span>
+<span class="cstat-no" title="statement not covered" >            data = store.serializer.parse(data);</span>
+<span class="cstat-no" title="statement not covered" >            data.id = keys[index].substr(prefixLength);</span>
+<span class="cstat-no" title="statement not covered" >            return data;</span>
           });
         } catch (er) {
-<span class="cstat-no" title="statement not covered">          return fn(er);</span>
+<span class="cstat-no" title="statement not covered" >          return fn(er);</span>
         }
-<span class="cstat-no" title="statement not covered">        return fn(null, result);</span>
+<span class="cstat-no" title="statement not covered" >        return fn(null, result);</span>
       });
     });
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return RedisStore;</span>
+<span class="cstat-no" title="statement not covered" >  return RedisStore;</span>
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 08:13:03 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 08:32:28 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
