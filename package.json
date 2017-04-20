@@ -1,6 +1,6 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "description": "test coverage for [connect-redis (v3.2.0)](https://github.com/visionmedia/connect-redis#readme) [![npm package](https://img.shields.io/npm/v/npmtest-connect-redis.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-connect-redis) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-connect-redis.svg)](https://travis-ci.org/npmtest/node-npmtest-connect-redis)",
+    "description": "#### basic test coverage for  [connect-redis (v3.2.0)](https://github.com/visionmedia/connect-redis#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-connect-redis.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-connect-redis) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-connect-redis.svg)](https://travis-ci.org/npmtest/node-npmtest-connect-redis)",
     "devDependencies": {
         "connect-redis": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
@@ -36,5 +36,5 @@
         "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.2"
+    "version": "0.0.3"
 }

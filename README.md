@@ -1,4 +1,7 @@
-# test coverage for  [connect-redis (v3.2.0)](https://github.com/visionmedia/connect-redis#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-connect-redis.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-connect-redis) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-connect-redis.svg)](https://travis-ci.org/npmtest/node-npmtest-connect-redis)
+# npmtest-connect-redis
+
+#### basic test coverage for  [connect-redis (v3.2.0)](https://github.com/visionmedia/connect-redis#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-connect-redis.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-connect-redis) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-connect-redis.svg)](https://travis-ci.org/npmtest/node-npmtest-connect-redis)
+
 #### Redis session store for Connect
 
 [![NPM](https://nodei.co/npm/connect-redis.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/connect-redis)
@@ -9,9 +12,15 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-connect-redis/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-connect-redis/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-connect-redis/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-connect-redis/tree/gh-pages/build)|
 
+- [https://npmtest.github.io/node-npmtest-connect-redis/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-connect-redis/build/coverage.html/index.html)
+
 [![istanbul-coverage](https://npmtest.github.io/node-npmtest-connect-redis/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-connect-redis/build/coverage.html/index.html)
 
+- [https://npmtest.github.io/node-npmtest-connect-redis/build/test-report.html](https://npmtest.github.io/node-npmtest-connect-redis/build/test-report.html)
+
 [![test-report](https://npmtest.github.io/node-npmtest-connect-redis/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-connect-redis/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-connect-redis/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-connect-redis/build/apidoc.html)
 
 [![apidoc](https://npmdoc.github.io/node-npmdoc-connect-redis/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-connect-redis/build/apidoc.html)
 
